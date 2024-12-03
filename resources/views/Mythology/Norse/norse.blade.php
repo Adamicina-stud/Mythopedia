@@ -1,46 +1,7 @@
-<!DOCTYPE html>
-<html lang="sk">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Mythopedia - Severská Mytológia</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <meta name="description" content="">
+<x-layout1>
+    @section('title', 'Domovská stránka')
+    @section('description', 'Vitajte na Mythopedii, mieste plnom mytologických príbehov.')
 
-    <link rel="icon" href="/favicon.ico" sizes="any">
-    <link rel="icon" href="/icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="../icon.png">
-
-    <link rel="manifest" href="../site.webmanifest">
-    <meta name="theme-color" content="#fafafa">
-</head>
-
-<body class="myth norse">
-
-<header>
-    <div class="header-top">
-        <h1>Severská Mytológia</h1>
-    </div>
-    <nav>
-        <ul>
-            <li><a href="../index.html">Domov</a></li>
-            <li class="dropdown">
-                <a href="#" class="dropbtn">Mytológie &#9662;</a>
-                <div class="dropdown-content">
-                    <a href="js/Greek%20Mythology/Grécka_Mytológia.html">Grécka mytológia</a>
-                    <a href="Severská_Mytológia.html">Severská mytológia</a>
-                    <a href="#" class="non-clickable">Egyptská mytológia</a>
-                    <a href="#" class="non-clickable">Keltská mytológia</a>
-                    <a href="#" class="non-clickable">Slovanská mytológia</a>
-                    <a href="../other/Zoznam_Mytológii.html">Dalšie...</a>
-                </div>
-            </li>
-            <li><a href="#" class="non-clickable">Creepypasty</a></li>
-        </ul>
-    </nav>
-</header>
-
-<main>
     <div class="content-with-image">
         <section class="content">
             <h2>Úvod do Severskej mytológie</h2>
@@ -96,10 +57,5 @@
             </li>
         </ul>
     </section>
-</main>
 
-<footer>
-    <p>&copy; 2024 Mythopedia</p>
-</footer>
-</body>
-</html>
+</x-layout1>
