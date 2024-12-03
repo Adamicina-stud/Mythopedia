@@ -10,7 +10,7 @@
 <header>
     <div class="header-top">
         <h1>@yield('title', 'Mythopedia')</h1>
-        <p>@yield('description', 'Mýty všetkých kútov sveta')</p>
+        <p>@yield('description')</p>
     </div>
     <x-navBar/>
 </header>

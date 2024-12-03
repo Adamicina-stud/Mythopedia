@@ -1,10 +1,10 @@
 <nav>
     <ul>
-        <li><a href="../index.html">Domov</a></li>
+        <li><a href="../">Domov</a></li>
         <li class="dropdown">
             <a href="#" class="dropbtn">Mytológie &#9662;</a>
             <div class="dropdown-content">
-                <a href="../js/Greek%20Mythology/Grécka_Mytológia.html">Grécka mytológia</a>
+                <a href="/mythology/greek">Grécka mytológia</a>
                 <a href="../Norse%20Mythology/Severská_Mytológia.html">Severská mytológia</a>
                 <a href="#" class="non-clickable">Egyptská mytológia</a>
                 <a href="#" class="non-clickable">Keltská mytológia</a>
