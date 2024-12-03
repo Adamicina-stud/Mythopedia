@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 0;
+    text-align: center;
+}
+
+.header-top {
+    background-image: url('/public/img/ceiling-fresco-Aurora-Guido-Reni-Casino-Rospigliosi.webp');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: white; /* Zabezpečí, že text bude viditeľný */
+    padding: 20px;
+}
+
+body.greek .header-top {
+    background-image: url('../img/greek-myths-europa-bull-01.webp');
+}
+
+body.norse .header-top {
+    background-image: url('../img/galileus_Uncover_the_Secrets_of_Norse_Mythology_Language_7268ba5d-3aa9-4606-a3b6-035b57a0715f.jpg');
+}
+
+.header-top::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Pridá tmavší overlay */
+    z-index: 1;
+}
+
+.header-top h1,
+.header-top p {
+    position: relative;
+    z-index: 2; /* Zabezpečí, že text bude nad overlayom */
+}
+
+nav {
+    color: #fff;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: #bababa;
+}
+
+nav ul li a.creepy:hover {
+    color: red !important;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    left: 50%;
+    transform: translate(-50%);
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    white-space: nowrap;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+.dropdown-content a:hover {
+    background-color: #575757;
+}
+
+/* Zobrazenie dropdown pri hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Štýl pre hlavné tlačidlo v dropdowne */
+.dropbtn {
+    cursor: pointer;
+}
+
+.non-clickable {
+    pointer-events: none;
+    color: #444444 !important;
+}
+
+.non-clickable:hover {
+    color: #444444 !important;
+    cursor: default;
+}
+
+main {
+    margin: 20px auto;
+    padding: 15px;
+    max-width: 1200px;
+    background: none;
+    border-radius: 8px;
+    box-shadow: none;
+}
+
+body.index main{
+    margin-top: 150px;
+    margin-bottom: 15px;
+}
+
+body.myth main{
+    margin-top: 130px;
+    margin-bottom: 15px;
+}
+
+section {
+    padding: 20px;
+    background: white;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section ul, section ol {
+    padding-left: 20px;
+    margin-left: 0;
+}
+
+section a{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section a:hover {
+    color: #888888;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+body.myth .content-with-image{
+    display: flex;
+    flex-direction: row;
+}
+
+body.myth .content {
+    width: 70%;
+}
+
+body.myth .section-image {
+    width: 30%;
+    height: auto;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 2px 0;
+}
+
+/* Responsive design for smaller devices */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 2px 0;
+    }
+
+
+    main {
+        padding: 10px;
+    }
+
+    body.index main {
+        margin-top: 225px;
+    }
+
+    body.myth main {
+        margin-top: 200px;
+    }
+}
+
+@media (max-width: 1000px) {
+    body.myth .content-with-image{
+        flex-direction: column;
+    }
+
+    body.myth .section-image {
+        width: auto;
+        height: auto;
+    }
+
+    body.myth .content{
+        width: auto;
+    }
+}
