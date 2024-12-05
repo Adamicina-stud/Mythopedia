@@ -14,9 +14,7 @@ body {
 }
 
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
+    position: relative;
     width: 100%;
     background-color: #333;
     padding: 0;
@@ -33,11 +31,16 @@ header {
 }
 
 body.greek .header-top {
-    background-image: url('../img/greek-myths-europa-bull-01.webp');
+    background-image: url('/public/img/greek-myths-europa-bull-01.webp');
 }
 
 body.norse .header-top {
-    background-image: url('../img/galileus_Uncover_the_Secrets_of_Norse_Mythology_Language_7268ba5d-3aa9-4606-a3b6-035b57a0715f.jpg');
+    background-image: url('/public/img/galileus_Uncover_the_Secrets_of_Norse_Mythology_Language_7268ba5d-3aa9-4606-a3b6-035b57a0715f.jpg');
+}
+
+body.me .header-top {
+    background-image: url('https://yt3.googleusercontent.com/wwkh48W4jmyW6fJIS3637epnr71-HXJ1YHU-OovntBeLi0hrGC6gX_sHL2lKnYjdDPFwVrQ1hnk=w1707-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj');
+    height: 117px;
 }
 
 .header-top::before {
@@ -58,7 +61,18 @@ body.norse .header-top {
 }
 
 nav {
+    position: relative;
+    top: 0;
+    z-index: 999;
     color: #fff;
+}
+
+nav.sticky {
+    position: fixed; /* Pripne sa na vrch, keď je sticky */
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Jemný tieň pre efekt */
 }
 
 nav ul {
@@ -136,22 +150,10 @@ nav ul li a.creepy:hover {
 }
 
 main {
-    margin: 20px auto;
-    padding: 15px;
-    max-width: 1200px;
+    margin: auto;
     background: none;
     border-radius: 8px;
     box-shadow: none;
-}
-
-body.index main{
-    margin-top: 150px;
-    margin-bottom: 15px;
-}
-
-body.myth main{
-    margin-top: 130px;
-    margin-bottom: 15px;
 }
 
 section {
@@ -215,19 +217,6 @@ footer {
 
     nav ul li {
         margin: 2px 0;
-    }
-
-
-    main {
-        padding: 10px;
-    }
-
-    body.index main {
-        margin-top: 225px;
-    }
-
-    body.myth main {
-        margin-top: 200px;
     }
 }
 

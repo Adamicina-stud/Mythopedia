@@ -29,13 +29,8 @@
     </section>
 
     <section>
-        <h2>Citát týždňa</h2>
-        <p>"Odvaha nie je absenciou strachu, ale skôr rozhodnutím, že niečo iné je dôležitejšie než strach." - Príslovie zo severskej mytológie</p>
-    </section>
-
-    <section>
         <h2>Prečo sú tu, teda tu budú Creepypasty?</h2>
-        <p>Lebo ich tu chcem.</p>
+        <p>Creepypasty sú moderným folklórom, podobne ako mytológie kedysi. Oba druhy príbehov odrážajú ľudské strachy, tajomstvá a túžbu rozprávať. Sú tu preto, aby ukázali, že príbehy, ktoré nás fascinujú, sa s dobou menia, ale nikdy nevymiznú.</p>
     </section>
 
     <section>

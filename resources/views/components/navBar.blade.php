@@ -1,19 +1,25 @@
 <nav>
     <ul>
-        <li><a href="../">Domov</a></li>
+        <li><a href="{{route('home')}}">Domov</a></li>
         <li class="dropdown">
-            <a href="#" class="dropbtn">Mytológie &#9662;</a>
+            <a href="{{route('mythology')}}" class="dropbtn">Mytológia &#9662;</a>
             <div class="dropdown-content">
-                <a href="/mythology/greek">Grécka mytológia</a>
-                <a href="../Norse%20Mythology/Severská_Mytológia.html">Severská mytológia</a>
+                <a href="{{route('greek')}}">Grécka mytológia</a>
+                <a href="{{route('norse')}}">Severská mytológia</a>
                 <a href="#" class="non-clickable">Egyptská mytológia</a>
                 <a href="#" class="non-clickable">Keltská mytológia</a>
-                <a href="#" class="non-clickable">Slovanská mytológia</a>
-                <a href="Zoznam_Mytológii.html">Dalšie...</a>
+                <a href="{{route('slavic')}}">Slovanská mytológia</a>
+                <a href="{{route('list')}}">Dalšie...</a>
             </div>
         </li>
         <li>
-            <a href="#" class="non-clickable">Creepypasty</a>
+            <a href="/posts">Príspevky</a>
+        </li>
+        <li>
+            <a href="{{route('creepypasta')}}" class="creepy">Creepypasty</a>
+        </li>
+        <li>
+            <a href="{{route('about_me')}}" >O mne</a>
         </li>
     </ul>
 </nav>

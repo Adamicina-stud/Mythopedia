@@ -1,7 +1,6 @@
 <x-layout1>
-    @section('title', 'Domovská stránka')
-    @section('description', 'Vitajte na Mythopedii, mieste plnom mytologických príbehov.')
-
+    @section('title', 'Severská mytológia')
+    @section('body-class', 'myth greek')
     <div class="content-with-image">
         <section class="content">
             <h2>Úvod do Severskej mytológie</h2>
