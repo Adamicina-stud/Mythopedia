@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Laravel 11 Tutorial</title>
+    @vite('resources/css/posts.css')
 </head>
 <body>
     {{ $slot }}

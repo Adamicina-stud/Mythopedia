@@ -21,7 +21,7 @@ window.addEventListener('scroll', function () {
         }
     }
 
-    //Padding pre footer
+    // Padding pre footer
     const currentPaddingBottom = parseInt(window.getComputedStyle(mainContent).paddingBottom, 10);
     if (currentPaddingBottom !== footerHeight) {
         mainContent.style.paddingBottom = `${footerHeight}px`;

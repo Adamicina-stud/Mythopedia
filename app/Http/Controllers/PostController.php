@@ -13,15 +13,18 @@ class PostController extends Controller
     public function index()
     {
         //get all posts from db
-        $name = 'Alfred';
-        $age = 20;
-        $posts = [
-            'post1',
-            'post2',
-            'post3',
-            'post4',
-        ];
-        return view('posts.index',['username' => $name, 'age' => $age, 'posts' => $posts]);
+        //$name = 'Alfred';
+        //$age = 20;
+        //$posts = [
+        //    'post1',
+        //    'post2',
+        //    'post3',
+        //    'post4',
+        //];
+        //return view('posts.index',['username' => $name, 'age' => $age, 'posts' => $posts]);
+
+        $posts = Post::all();
+        return view('posts.index', compact('posts'));
     }
 
     /**
@@ -37,23 +40,32 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validated = $request->validate([
+            'title' => ['required', 'max:255'],
+            'author' => ['required', 'max:255'],
+            'content' => ['required', 'min:10'],
+        ]);
+
+        Post::create($validated);
+
+        return redirect()->route('posts.index')->with('success', 'Post created successfully!');
+
     }
 
     /**
      * Display the specified resource.
      */
-    public function show()
+    public function show(Post $post)
     {
-        return view('posts.show');
+        return view('posts.show', compact('post'));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit()
+    public function edit(Post $post)
     {
-        return view('posts.edit');
+        return view('posts.edit', compact('post'));
     }
 
     /**
@@ -61,7 +73,16 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
-        //
+        $validated = $request->validate([
+            'title' => ['required', 'max:255'],
+            'author' => ['required', 'max:255'],
+            'content' => ['required', 'min:10'],
+        ]);
+
+        $post->update($validated);
+
+        return redirect()->route('posts.index')->with('success', 'Post updated successfully!');
+
     }
 
     /**
@@ -69,6 +90,9 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-        //
+        $post->delete();
+
+        return redirect()->route('posts.index')->with('success', 'Post deleted successfully!');
+
     }
 }
